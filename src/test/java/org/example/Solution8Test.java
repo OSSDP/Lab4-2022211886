@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class Solution8Test {
-
+//测试
     private final Solution8 solution = new Solution8();
 
     // 测试用例设计的总体原则

@@ -39,7 +39,6 @@ package org.example;
  * grid[i][j] 的值为 '0' 或 '1'
  *
  */
-//实现
 public class Solution8 {
     public void dfs(char[][] grid, int r, int c) {
         int nr = grid.length;
