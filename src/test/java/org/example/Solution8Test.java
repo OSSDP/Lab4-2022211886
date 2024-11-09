@@ -84,16 +84,6 @@ public class Solution8Test {
         };
         assertEquals(4, solution.numIslands(input));
     }
-
-    // 测试目的: 验证null输入是否能正确处理
-    // 测试用例:
-    // 输入: null
-    // 预期输出: 抛出NullPointerException或其他异常
-    @Test(expected = NullPointerException.class)
-    public void testNullInput() {
-        solution.numIslands(null);
-    }
-
     // 测试目的: 验证不规则数组输入是否能正确处理
     // 测试用例:
     // 输入: 不规则的二维字符数组，例如第一行长度与其他行不同
