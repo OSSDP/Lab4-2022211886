@@ -84,4 +84,42 @@ public class Solution8Test {
         };
         assertEquals(4, solution.numIslands(input));
     }
+
+    // 测试目的: 验证null输入是否能正确处理
+    // 测试用例:
+    // 输入: null
+    // 预期输出: 抛出NullPointerException或其他异常
+    @Test(expected = NullPointerException.class)
+    public void testNullInput() {
+        solution.numIslands(null);
+    }
+
+    // 测试目的: 验证不规则数组输入是否能正确处理
+    // 测试用例:
+    // 输入: 不规则的二维字符数组，例如第一行长度与其他行不同
+    // 预期输出: 抛出ArrayIndexOutOfBoundsException或其他异常
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void testIrregularArrayInput() {
+        char[][] input = new char[][]{
+                {'1', '1', '1'},
+                {'1', '1', '1', '1'}, // 不同长度
+                {'1', '1'}
+        };
+        solution.numIslands(input);
+    }
+
+    // 测试目的: 验证包含非'0'和'1'字符的输入是否能正确处理
+    // 测试用例:
+    // 输入: 包含除了'0'和'1'之外的其他字符
+    // 预期输出: 返回值不确定，取决于实现
+    @Test
+    public void testInvalidCharacters() {
+        char[][] input = new char[][]{
+                {'1', '2', '1'},
+                {'0', '0', '0'},
+                {'1', '1', '1'}
+        };
+        // 假设'2'被视为水，则应返回2个岛屿
+        assertEquals(2, solution.numIslands(input));
+    }
 }
